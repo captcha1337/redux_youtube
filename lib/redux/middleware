@@ -1,0 +1,11 @@
+import 'package:redux/redux.dart';
+
+import 'actions.dart';
+import 'app_state.dart';
+
+void loaderMiddleware(
+    Store<AppState> store, dynamic action, NextDispatcher nextDispatcher) {
+  if (action is GetImageAction) {}
+
+  nextDispatcher(action);
+}
