@@ -27,7 +27,7 @@ class CounterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () => store.dispatch(incCountThunkAction(store)),
+              onPressed: () => store.dispatch(IncrementAction()),
               child: const Icon(Icons.add),
             ),
             const SizedBox(

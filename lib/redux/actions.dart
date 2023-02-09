@@ -6,7 +6,7 @@ import 'package:redux_thunk/redux_thunk.dart';
 class IncrementAction {
   late int count;
 
-  IncrementAction(this.count);
+  // IncrementAction(this.count);
 }
 
 class DecrementAction {}
@@ -29,17 +29,17 @@ class LoadedImageAction {
   LoadedImageAction(this.widget);
 }
 
-ThunkAction incCountThunkAction = (Store store) async {
-  compute(calc, 1).then((value) => store.dispatch(IncrementAction(value)));
-};
+// ThunkAction incCountThunkAction = (Store store) async {
+//   compute(calc, 1).then((value) => store.dispatch(IncrementAction(value)));
+// };
 
-Future<int> calc(int count) async {
-  int result = 0;
-  for (var i = 0; i < count; ++i) {
-    result++;
-  }
-  return result;
-}
+// Future<int> calc(int count) async {
+//   int result = 0;
+//   for (var i = 0; i < count; ++i) {
+//     result++;
+//   }
+//   return result;
+// }
 
 ThunkAction loadImageThunkAction = (Store store) async {
   store.dispatch(GetImageAction());
