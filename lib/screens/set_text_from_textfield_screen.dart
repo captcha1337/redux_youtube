@@ -8,8 +8,8 @@ import '../common/common_template.dart';
 import '../redux/actions.dart';
 import '../redux/app_state.dart';
 
-class SetTextFromTextfield extends StatelessWidget {
-  SetTextFromTextfield({super.key});
+class SetTextFromTextfieldScreen extends StatelessWidget {
+  SetTextFromTextfieldScreen({super.key});
 
   final String clearInputText = '';
   String inputText = '';

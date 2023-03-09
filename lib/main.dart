@@ -1,29 +1,33 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:redux/redux.dart';
 
-import 'pages/image_getter_page.dart';
-import 'pages/set_text_from_textfield_page.dart';
+import 'common/common_template.dart';
+import 'screens/counter_screen.dart';
+import 'screens/image_getter_screen.dart';
+import 'screens/set_text_from_textfield_screen.dart';
 import 'redux/app_state.dart';
 import 'redux/reducers.dart';
-import 'pages/counter_page.dart';
-import 'common/common_template.dart';
 
 void main() {
   Store<AppState> store = Store(reducer,
-      initialState:
-          AppState(counter: 0, text: '', widget: const Icon(Icons.image)));
+      initialState: AppState(
+        counter: 0,
+        text: '',
+        widget: const Icon(Icons.image),
+      ));
 
   runApp(
     StoreProvider<AppState>(
       store: store,
       child: MaterialApp(initialRoute: '/', routes: {
         '/': (context) => const _Counter(),
-        '/counter_page': (context) => const CounterPage(),
-        '/image_getter_page': (context) => const ImageGetterPage(),
-        '/set_text_from_textfield_page': (context) => SetTextFromTextfield(),
+        '/counter_page': (context) => const CounterScreen(),
+        '/image_getter_page': (context) => const ImageGetterScreen(),
+        '/set_text_from_textfield_page': (context) =>
+            SetTextFromTextfieldScreen(),
       }),
     ),
   );

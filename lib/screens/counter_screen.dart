@@ -6,8 +6,8 @@ import '../common/common_template.dart';
 import '../redux/actions.dart';
 import '../redux/app_state.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({super.key});
+class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

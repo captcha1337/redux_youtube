@@ -6,8 +6,8 @@ import '../common/common_template.dart';
 import '../redux/actions.dart';
 import '../redux/app_state.dart';
 
-class ImageGetterPage extends StatelessWidget {
-  const ImageGetterPage({super.key});
+class ImageGetterScreen extends StatelessWidget {
+  const ImageGetterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
